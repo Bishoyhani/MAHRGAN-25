@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التحقق الإداري</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/admin-verification.css" />
+
+</head>
+
+<body>
+
+  {% if warning_message %}
+  <div id="toast" class="show warning">
+    <div id="img">
+      <!-- SVG for warning -->
+      <svg width="256px" height="256px" viewBox="0 0 14.00 14.00" xmlns="http://www.w3.org/2000/svg"
+        fill="#fffafa" stroke="#fffafa" stroke-width="0.00014">
+        <g id="SVGRepo_iconCarrier">
+          <g fill-rule="evenodd">
+            <path d="M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7z"></path>
+            <path d="M13 7A6 6 0 1 0 1 7a6 6 0 0 0 12 0z" fill="#ff0000"></path>
+            <path
+              d="M7 5.969L5.599 4.568a.29.29 0 0 0-.413.004l-.614.614a.294.294 0 0 0-.004.413L5.968 7l-1.4 1.401a.29.29 0 0 0 .004.413l.614.614c.113.114.3.117.413.004L7 8.032l1.401 1.4a.29.29 0 0 0 .413-.004l.614-.614a.294.294 0 0 0 .004-.413L8.032 7l1.4-1.401a.29.29 0 0 0-.004-.413l-.614-.614a.294.294 0 0 0-.413-.004L7 5.968z">
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div id="desc">{{ warning_message }}</div>
+  </div>
+  {% endif %}
+
+  <div class="admin-verify-container">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#A0F6FA;" d="M256,0c-5.751,0-11.39,0.482-16.879,1.402l80.071,70.527l32.505-3.863C337.95,28.446,300.3,0,256,0z "></path> <path style="fill:#A0F6FA;" d="M376.967,67.516c-5.813,0-11.444,0.757-16.824,2.143l-16.934,132.89h33.758 c37.288,0,67.517-30.228,67.517-67.516S414.255,67.516,376.967,67.516z"></path> </g> <path style="fill:#D0FBFD;" d="M410.725,135.033c0-31.44-21.49-57.859-50.582-65.374c-2.452,0.631-4.856,1.381-7.192,2.27 c-0.393-1.299-0.81-2.587-1.254-3.863c-2.783-0.349-5.612-0.549-8.489-0.549c-8.462,0-16.553,1.571-24.017,4.413 c-11-36.387-41.916-64.125-80.071-70.527c-38.155,6.403-69.073,34.141-80.071,70.527c-7.464-2.842-15.555-4.413-24.017-4.413 c-37.288,0-67.516,30.228-67.516,67.516s30.228,67.516,67.516,67.516h208.176C380.497,202.549,410.725,172.321,410.725,135.033z"></path> <path style="fill:#B7D9DD;" d="M256,115.341l-11.253,16.879L256,149.099c29.52,0,53.451,23.931,53.451,53.451s0,120.967,0,120.967 h33.758c0,0,0-72.803,0-120.967S304.164,115.341,256,115.341z"></path> <path style="fill:#C7E7EB;" d="M168.791,202.549c0,48.164,0,120.967,0,120.967h33.758c0,0,0-91.448,0-120.967 s23.93-53.451,53.451-53.451v-33.758C207.836,115.341,168.791,154.385,168.791,202.549z"></path> <polygon style="fill:#88ACB5;" points="343.209,289.758 309.451,400.879 343.209,512 376.967,512 376.967,289.758 "></polygon> <rect x="135.033" y="289.758" style="fill:#A7CBCF;" width="208.176" height="222.242"></rect> <g> <circle style="fill:#2F5E88;" cx="256" cy="384" r="16.879"></circle> <path style="fill:#2F5E88;" d="M247.56,389.626v45.011c0,4.662,3.779,8.44,8.44,8.44c4.661,0,8.44-3.778,8.44-8.44v-45.011H247.56z "></path> </g> <g> <circle style="fill:#88ACB5;" cx="210.989" cy="469.802" r="8.44"></circle> <circle style="fill:#88ACB5;" cx="177.231" cy="436.044" r="8.44"></circle> </g> </g></svg>
+    <div class="admin-verify-title">التحقق الإداري</div>
+    <div class="admin-verify-desc">
+      يرجى إدخال بيانات التحقق للوصول إلى لوحة الإدارة.<br>
+      هذه الصفحة مخصصة للمديرين فقط.
+    </div>
+    <form class="admin-verify-form" method="post" action="/admin-dashboard">
+      <div class="input-eye-box">
+        <input type="text" name="username" class="admin-input" placeholder="اسم المستخدم الإداري" autocomplete="off" required>
+      </div>
+      <div class="input-eye-box">
+        <input type="password" name="admin_password" class="admin-input" placeholder="كلمة المرور الإدارية"
+          autocomplete="off" required id="adminPassword">
+        <span class="toggle-eye" onclick="togglePasswordVisibility('adminPassword', this)">
+          <i class="bx bx-show"></i>
+        </span>
+      </div>
+      <button type="submit" class="admin-btn"><i class="bx bx-check-shield"></i> دخول لوحة الإدارة</button>
+    </form>
+    <div class="admin-verify-footer">
+      &copy; جميع الحقوق محفوظة صوّتلي 2025
+    </div>
+  </div>
+  <script>
+    function togglePasswordVisibility(inputId, eyeSpan) {
+      const input = document.getElementById(inputId);
+      const icon = eyeSpan.querySelector('i');
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove('bx-show');
+        icon.classList.add('bx-hide');
+      } else {
+        input.type = "password";
+        icon.classList.remove('bx-hide');
+        icon.classList.add('bx-show');
+      }
+    }
+  </script>
+</body>
+</html>

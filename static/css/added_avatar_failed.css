@@ -1,0 +1,57 @@
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #e3efff);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .error-box {
+      background: white;
+      padding: 50px 30px;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      animation: fadeIn 0.7s ease;
+    }
+
+    .error-box svg {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .error-box h1 {
+      font-size: 1.8rem;
+      color: #d63031;
+      margin-bottom: 15px;
+    }
+
+    .error-box p {
+      color: #555;
+      font-size: 1.05rem;
+      margin-bottom: 25px;
+    }
+
+    .error-box a {
+      display: inline-block;
+      padding: 12px 22px;
+      background-color: #d63031;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .error-box a:hover {
+      background-color: #b71c1c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }

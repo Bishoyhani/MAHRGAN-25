@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فشل التحقق من الرمز</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/OTP_expired_failed.css" />
+</head>
+
+<body>
+  <div class="left-section">
+    <img src="/static/images/OTP_failed.png">
+  </div>
+  <form action="/retry" method="post" class="right-section">
+      <h1>فشل التحقق من الOTP</h1>
+      <p>رمز التحقق غير صحيح.<br>يرجى المحاولة مرة أخرى.</p>
+      <button class="btn">إعادة المحاولة</button>
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم الإدارية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/static/CSS/admin-dashboard.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <i class="bx bxs-dashboard"></i> لوحة التحكم الإدارية
+  </div>
+
+  <div class="dashboard">
+
+    <!-- KPI Cards -->
+    <div class="kpi-cards">
+      <div class="card">
+        <svg viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M14.9238 7.281C14.9227 8.5394 13.9018 9.55874 12.6435 9.558C11.3851 9.55726 10.3654 8.53673 10.3658 7.27833C10.3662 6.01994 11.3864 5 12.6448 5C13.2495 5.00027 13.8293 5.24073 14.2567 5.6685C14.6841 6.09627 14.924 6.67631 14.9238 7.281Z"
+              stroke="#4f8cff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M14.9968 12.919H10.2968C8.65471 12.9706 7.35028 14.3166 7.35028 15.9595C7.35028 17.6024 8.65471 18.9484 10.2968 19H14.9968C16.6388 18.9484 17.9432 17.6024 17.9432 15.9595C17.9432 14.3166 16.6388 12.9706 14.9968 12.919V12.919Z"
+              stroke="#4f8cff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M20.6878 9.02403C20.6872 9.98653 19.9066 10.7664 18.9441 10.766C17.9816 10.7657 17.2016 9.9852 17.2018 9.0227C17.202 8.06019 17.9823 7.28003 18.9448 7.28003C19.4072 7.28003 19.8507 7.4638 20.1776 7.7909C20.5045 8.11799 20.688 8.56158 20.6878 9.02403V9.02403Z"
+              stroke="#4f8cff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M4.3338 9.02401C4.3338 9.98664 5.11417 10.767 6.0768 10.767C7.03943 10.767 7.8198 9.98664 7.8198 9.02401C7.8198 8.06137 7.03943 7.28101 6.0768 7.28101C5.11417 7.28101 4.3338 8.06137 4.3338 9.02401V9.02401Z"
+              stroke="#4f8cff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path
+              d="M19.4368 12.839C19.0226 12.839 18.6868 13.1748 18.6868 13.589C18.6868 14.0032 19.0226 14.339 19.4368 14.339V12.839ZM20.7438 13.589L20.7593 12.8392C20.7541 12.839 20.749 12.839 20.7438 12.839V13.589ZM20.7438 18.24V18.99C20.749 18.99 20.7541 18.9899 20.7593 18.9898L20.7438 18.24ZM19.4368 17.49C19.0226 17.49 18.6868 17.8258 18.6868 18.24C18.6868 18.6542 19.0226 18.99 19.4368 18.99V17.49ZM5.58477 14.339C5.99899 14.339 6.33477 14.0032 6.33477 13.589C6.33477 13.1748 5.99899 12.839 5.58477 12.839V14.339ZM4.27777 13.589V12.839C4.27259 12.839 4.26741 12.839 4.26222 12.8392L4.27777 13.589ZM4.27777 18.24L4.26222 18.9898C4.26741 18.9899 4.27259 18.99 4.27777 18.99V18.24ZM5.58477 18.99C5.99899 18.99 6.33477 18.6542 6.33477 18.24C6.33477 17.8258 5.99899 17.49 5.58477 17.49V18.99ZM19.4368 14.339H20.7438V12.839H19.4368V14.339ZM20.7282 14.3388C21.5857 14.3566 22.2715 15.0568 22.2715 15.9145H23.7715C23.7715 14.2405 22.4329 12.8739 20.7593 12.8392L20.7282 14.3388ZM22.2715 15.9145C22.2715 16.7722 21.5857 17.4724 20.7282 17.4902L20.7593 18.9898C22.4329 18.9551 23.7715 17.5885 23.7715 15.9145H22.2715ZM20.7438 17.49H19.4368V18.99H20.7438V17.49ZM5.58477 12.839H4.27777V14.339H5.58477V12.839ZM4.26222 12.8392C2.58861 12.8739 1.25 14.2405 1.25 15.9145H2.75C2.75 15.0568 3.43584 14.3566 4.29332 14.3388L4.26222 12.8392ZM1.25 15.9145C1.25 17.5885 2.58861 18.9551 4.26222 18.9898L4.29332 17.4902C3.43584 17.4724 2.75 16.7722 2.75 15.9145H1.25ZM4.27777 18.99H5.58477V17.49H4.27777V18.99Z"
+              fill="#4f8cff"></path>
+          </g>
+        </svg>
+        <h3>عدد المستخدمين</h3>
+        <p>{{ num_users }}</p>
+      </div>
+      <div class="card">
+        <svg fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M6.091,10.945A6.018,6.018,0,0,0,9,17.191V20a3,3,0,0,0,6,0V17.191a6,6,0,1,0-8.909-6.246ZM12.008,8a3.944,3.944,0,0,1,2.513.9,4,4,0,0,1-.922,6.768,1,1,0,0,0-.6.916V20a1,1,0,0,1-2,0V16.578a1,1,0,0,0-.6-.916,4,4,0,0,1,.725-7.571A4.312,4.312,0,0,1,12.008,8ZM12,4a1,1,0,0,1-1-1V2a1,1,0,0,1,2,0V3A1,1,0,0,1,12,4Zm7.778,1.636-.707.707a1,1,0,0,1-1.414-1.414l.707-.707a1,1,0,0,1,1.414,1.414ZM4.929,20.071a1,1,0,0,1-.707-1.707l.706-.707a1,1,0,1,1,1.415,1.414l-.706.707A1,1,0,0,1,4.929,20.071ZM23,12a1,1,0,0,1-1,1H21a1,1,0,0,1,0-2h1A1,1,0,0,1,23,12ZM4,12a1,1,0,0,1-1,1H2a1,1,0,0,1,0-2H3A1,1,0,0,1,4,12Zm15.778,6.364a1,1,0,1,1-1.414,1.414l-.707-.707a1,1,0,0,1,1.414-1.414ZM6.343,4.929A1,1,0,0,1,4.928,6.343l-.706-.707A1,1,0,0,1,5.637,4.222Z">
+            </path>
+          </g>
+        </svg>
+        <h3>عدد الاقتراحات</h3>
+        <p>{{ num_suggestions}}</p>
+      </div>
+      <div class="card">
+        <i class="bx bx-bar-chart"></i>
+        <h3>عدد التصويتات</h3>
+        <p>{{ num_votes }}</p>
+      </div>
+      <div class="card">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 490.969 490.969" xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path
+                d="M366.093,124.285H20.418C9.143,124.285,0,133.418,0,144.699v321.172c0,11.275,9.137,20.417,20.418,20.417h345.671 c11.271,0,20.408-9.142,20.408-20.417V144.699C386.508,133.418,377.369,124.285,366.093,124.285z M72.815,461.795H16.338v-47.984 h56.477V461.795z M72.815,401.559H16.338v-61.247h56.477V401.559z M72.815,328.076H16.338v-57.161h56.477V328.076z M72.815,258.669 H16.338v-50.003h56.477V258.669z M152.434,461.795H85.065v-47.984h67.362v47.984H152.434z M152.434,401.559H85.065v-61.247h67.362 v61.247H152.434z M152.434,328.076H85.065v-57.161h67.362v57.161H152.434z M152.434,258.669H85.065v-50.003h67.362v50.003H152.434z M225.918,461.795h-61.243v-47.984h61.243V461.795z M225.918,401.559h-61.243v-61.247h61.243V401.559z M225.918,328.076h-61.243 v-57.161h61.243V328.076z M225.918,258.669h-61.243v-50.003h61.243V258.669z M295.323,461.795h-57.16v-47.984h57.16V461.795z M295.323,401.559h-57.16v-61.247h57.16V401.559z M295.323,328.076h-57.16v-57.161h57.16V328.076z M295.323,258.669h-57.16v-50.003 h57.16V258.669z M370.18,461.795h-62.6v-47.984h62.6V461.795z M370.18,401.559h-62.6v-61.247h62.6V401.559z M370.18,328.076h-62.6 v-57.161h62.6V328.076z M370.18,258.669h-62.6v-50.003h62.6V258.669z M470.547,4.681H124.87c-11.274,0-20.413,9.135-20.413,20.418 v87.958h16.334v-24h56.476v24h12.256v-24h67.354v24h12.257v-24h61.242v24h12.246v-24h57.163v50.014h-2.287 c1.042,3.393,1.606,6.994,1.606,10.726v1.519h0.681v57.16h-0.681v12.25h0.681v61.245h-0.681v12.246h0.681v47.979h-0.681v24.494 h71.455c11.272,0,20.409-9.141,20.409-20.413V25.099C490.957,13.816,481.818,4.681,470.547,4.681z M474.629,342.185h-62.605V294.21 h62.6v47.975H474.629z M474.629,281.969h-62.605v-61.245h62.6v61.245H474.629z M474.629,208.48h-62.605v-57.166h62.6v57.166 H474.629z M474.629,139.07h-62.605V89.057h62.6v50.014H474.629z">
+              </path>
+            </g>
+          </g>
+        </svg>
+        <h3>عدد الجداول</h3>
+        <p>{{ data | length }}</p>
+      </div>
+      <div class="card">
+        <svg viewBox="-0.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+          fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>comments</title>
+            <desc>Created with Sketch Beta.</desc>
+            <defs> </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+              <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -255.000000)"
+                fill="#4f8cff">
+                <path
+                  d="M259,266.5 C259,261.254 263.753,257 270,257 C274.973,257 280,261.254 280,266.5 C280,271.747 276.075,276 270,276 C269.107,276 267.244,275.898 266.413,275.725 L263,278 L263,274.456 C260.561,272.477 259,269.834 259,266.5 L259,266.5 Z M266.637,277.736 C267.414,277.863 269.181,278 270,278 C277.18,278 282,272.657 282,266.375 C282,260.093 275.977,255 270,255 C262.811,255 257,260.093 257,266.375 C257,270.015 258.387,273.104 261,275.329 L261,281 L266.637,277.736 L266.637,277.736 Z M283.949,264.139 C283.968,264.425 284,264.709 284,265 C284,265.636 283.938,266.259 283.849,266.874 C285.195,268.45 286,270.392 286,272.5 C286,275.834 284.008,278.761 281,280.456 L281,284 L277.587,281.725 C276.756,281.898 275.893,282 275,282 C272.41,282 271.034,281.222 269.154,279.929 C268.609,279.973 268.059,280 267.5,280 C267.102,280 266.712,279.972 266.32,279.949 C268.701,282.276 271.149,283.75 275,283.75 C275.819,283.75 276.618,283.676 277.395,283.549 L283,287 L283,281.329 C286.04,279.246 288,276.015 288,272.375 C288,269.131 286.439,266.211 283.949,264.139 L283.949,264.139 Z M275.5,268 C276.329,268 277,267.329 277,266.5 C277,265.672 276.329,265 275.5,265 C274.671,265 274,265.672 274,266.5 C274,267.329 274.671,268 275.5,268 L275.5,268 Z M263.5,268 C264.329,268 265,267.329 265,266.5 C265,265.672 264.329,265 263.5,265 C262.671,265 262,265.672 262,266.5 C262,267.329 262.671,268 263.5,268 L263.5,268 Z M269.5,268 C270.329,268 271,267.329 271,266.5 C271,265.672 270.329,265 269.5,265 C268.671,265 268,265.672 268,266.5 C268,267.329 268.671,268 269.5,268 L269.5,268 Z"
+                  id="comments" sketch:type="MSShapeGroup"> </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <h3>عدد التعليقات</h3>
+        <p>{{ num_comments }}</p>
+      </div>
+      <div class="card">
+        <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>credit-card-front</title>
+            <path
+              d="M28 5.25h-24c-1.518 0.002-2.748 1.232-2.75 2.75v16c0.002 1.518 1.232 2.748 2.75 2.75h24c1.518-0.002 2.748-1.232 2.75-2.75v-16c-0.002-1.518-1.232-2.748-2.75-2.75h-0zM29.25 24c-0.001 0.69-0.56 1.249-1.25 1.25h-24c-0.69-0.001-1.249-0.56-1.25-1.25v-16c0.001-0.69 0.56-1.249 1.25-1.25h24c0.69 0.001 1.249 0.56 1.25 1.25v0zM10 21.25h-4c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h4c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM20 21.25h-6c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h6c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM24 17.25h-18c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h18c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM26 9.25h-6c-0.414 0-0.75 0.336-0.75 0.75v0 4c0 0.414 0.336 0.75 0.75 0.75h6c0.414-0 0.75-0.336 0.75-0.75v0-4c-0-0.414-0.336-0.75-0.75-0.75v0zM25.25 13.25h-4.5v-2.5h4.5z">
+            </path>
+          </g>
+        </svg>
+        <h3>عدد الكروت</h3>
+        <p>{{ num_cards }}</p>
+      </div>
+    </div>
+
+
+    <!-- Chart Section -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Dynamic Tables -->
+    {% for table_name, table_data in data.items() %}
+    <div class="table-block">
+      <div class="table-title">
+        <span><i class="bx bx-table"></i> جدول: {{ table_name }}</span>
+      </div>
+      <div class="table-scroll">
+        <table class="datatable">
+          <thead>
+            <tr>
+              {% for col in table_data.columns %}
+              <th>{{ col }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in table_data.rows %}
+            <tr>
+              {% for cell in row %}
+              <td>{{ cell }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <!-- <script src="/static/JS/jQuery.js"></script>
+  <script src="/static/JS/jQuer_datatable.js"></script>
+  <script src="/static/JS/charts.js"></script> -->
+
+  <script>
+    $(document).ready(function () {
+      $('.datatable').DataTable({
+        language: {
+          search: "البحث: ",
+          lengthMenu: "عرض _MENU_ سجلات",
+          info: "عرض _START_ إلى _END_ من أصل _TOTAL_ سجل",
+          paginate: { previous: "السابق", next: "التالي" },
+          zeroRecords: "لا توجد بيانات"
+        }
+      });
+    });
+
+
+
+    // إعداد مخطط الأعمدة
+const barChart = new Chart(document.getElementById('barChart'), {
+  type: 'bar',
+  data: {
+    labels: ['المستخدمين', 'الاقتراحات', 'التصويتات', 'التعليقات', 'الكروت'],
+    datasets: [{
+      label: 'الإحصائيات العامة',
+      data: [
+        {{ num_users }},
+        {{ num_suggestions }},
+        {{ num_votes }},
+        {{ num_comments }},
+        {{ num_cards }}
+      ],
+      backgroundColor: ['#4f8cff', '#34c9eb', '#ffc107', '#8b5cf6', '#28c76f']
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100,
+        ticks: {
+          stepSize: 5
+        }
+      }
+    }
+  }
+});
+
+    // إعداد مخطط الدائرة
+    const pieChart = new Chart(document.getElementById('pieChart'), {
+      type: 'pie',
+      data: {
+        labels: ['مستخدمين', 'اقتراحات', 'تصويتات', 'تعليقات', 'كروت'],
+        datasets: [{
+          data: [
+            {{ num_users }},
+        {{ num_suggestions }},
+          {{ num_votes }},
+    {{ num_comments }},
+    {{ num_cards }}
+        ],
+    backgroundColor: ['#4f8cff', '#34c9eb', '#ffc107', '#8b5cf6', '#28c76f']
+      }]
+    },
+    options: {
+      responsive: true,
+        plugins: {
+        legend: {
+          position: 'right'
+        }
+      }
+    }
+  });
+  </script>
+
+
+</body>
+
+</html>

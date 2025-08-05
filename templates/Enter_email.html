@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forgot Password</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/bootstrap5.css" />
+    <link rel="stylesheet" href="/static/css/Enter_email.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form class="container" action="sent_email" method="POST">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+            <img
+              src="/static/images/main.png"
+              alt="Main IMG"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 pt-5 input-form">
+            <h2 class="main-text pt-5 mt-5">هل نسيت كلمة المرور؟</h2>
+            <input
+              type="email"
+              placeholder="أدخل بريدك الإلكتروني"
+              class="form-control main-input mt-5"
+              id="email"
+              name="email"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required
+              autocomplete="off"
+            />
+            <div id="email-message" class="message"></div>
+            <div id="email_error" class="msg">{{ error }}</div>
+            <p class="text-muted mt-3">
+              سوف نرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك
+            </p>
+            <div class="row">
+              <div class="col-3">
+                <button class="btn btn-sz-primary mt-5" id="reset-btn">إعادة التعيين</button>
+              </div>
+              <div class="col-6 pt-5">
+                <a href="/" class="btn back-to-login">العودة لتسجيل الدخول</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <script src="/static/JS/Enter_email.js"></script>
+  </body>
+</html>

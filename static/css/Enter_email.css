@@ -1,0 +1,105 @@
+html,
+body {
+  font-weight: 200 !important;
+  font-family: "Cairo", Tahoma, Arial, sans-serif !important;
+  overflow: hidden;
+}
+
+.primary-color {
+  color: #4e51fd;
+}
+
+.btn-sz-primary {
+  width: 130px;
+  color: white !important;
+  background-color: #4e51fd;
+  border: 2px solid #4e51fd !important;
+}
+
+.text-center {
+  animation: appearLeft 1s ease 1;
+}
+@keyframes appearLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.input-form{
+  animation: appearRight 1s ease 1;
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.msg{
+  text-align: right;
+  color: red;
+  font-size: 13px;
+}
+
+.main-text {
+  font-size: 21px;
+  line-height: 1.4;
+  text-align: right;
+  width: 100%;
+}
+
+.back-to-login {
+  color: #4e51fd;
+  border: 2px solid;
+}
+.back-to-login:hover {
+  color: white;
+  background-color: #4e51fd;
+  border: 2px solid #4e51fd;
+  transition: all 0.3s ease;
+}
+
+.btn-sz-primary:hover {
+  color: #4e51fd !important;
+  border-color: #4e51fd !important;
+  background-color: white !important;
+  transition: all 0.3s ease;
+}
+
+.main-input {
+  width: 100%;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  border-bottom: 2px solid #4e51fd !important;
+  text-align: end;
+}
+
+.text-muted {
+  font-size: 12px;
+  margin: 0;
+  text-align: right;
+}
+
+
+.message.success {
+  background: #eafbe6;
+  color: #249f41;
+  border-color: #b1e7bc;
+  text-align: right;
+}
+.message.error {
+  background: #fff1f1;
+  color: #e64b3c;
+  border-color: #f3c2be;
+  text-align: right;
+}

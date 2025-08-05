@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>تعديل الملف الشخصي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/profile_edit.css">
+
+</head>
+
+<body>
+
+  <form class="profile-form" method="POST" action="profile-edit-verification" enctype="multipart/form-data">
+    <h2>تعديل الملف الشخصي</h2>
+
+
+    <div class="avatar-container">
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/police/male" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/police/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/police/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/doctor/female" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/doctor/female" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/doctor/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/designer/male" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/designer/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/designer/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/chef/male" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/chef/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/chef/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/farmer/female" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/farmer/female" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/farmer/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/firefighters/male" {%
+          if avatar_url=="https://avatar.iran.liara.run/public/job/firefighters/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/firefighters/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/teacher/male" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/job/teacher/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/teacher/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/operator/female" {%
+          if avatar_url=="https://avatar.iran.liara.run/public/job/operator/female" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/operator/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/astronomer/male" {%
+          if avatar_url=="https://avatar.iran.liara.run/public/job/astronomer/male" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/astronomer/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/39" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/39" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/39" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/40" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/40" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/40" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/82" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/82" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/82" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/38" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/38" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/38" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/43" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/43" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/43" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/60" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/60" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/60" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/37" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/37" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/37" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/64" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/64" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/64" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/17" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/17" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/17" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/77" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/77" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/77" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/12" {% if
+          avatar_url=="https://avatar.iran.liara.run/public/12" %}checked{% endif %}>
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/12" alt="avatar"></div>
+      </label>
+
+      <!-- Upload Circle with + and preview -->
+      <div class="avatar-option">
+        <input type="radio" name="selected_avatar" id="uploadedRadio" style="display: none;" {% if avatar_url
+          and 'uploads/' in avatar_url %}checked{% endif %}>
+
+        <div class="avatar-upload" onclick="document.getElementById('avatar_file').click()">
+          <span class="plus" id="plus-sign" {% if avatar_url and 'uploads/' in avatar_url %}style="display: none;" {%
+            endif %}>+</span>
+          <img id="upload-preview" alt="صورة مرفوعة" {% if uploaded_image_url %} src="{{ uploaded_image_url }}"
+            style="display: block;" {% else %} style="display: none;" {% endif %}>
+
+        </div>
+
+        <input type="file" name="avatar_file" id="avatar_file" accept="image/*" onchange="previewAvatar(event)">
+      </div>
+
+    </div>
+
+    <!-- Input fields -->
+    <label for="name">الاسم الكامل</label>
+    <input type="text" name="name" id="name" value="{{ name }}">
+
+    <label for="email">البريد الإلكتروني</label>
+    <input type="email" name="email" id="email" value="{{ email }}">
+
+    <label for="password">كلمة المرور الجديدة</label>
+    <input type="text" name="password" id="password" placeholder="اتركه فارغًا إذا لا تريد تغييره">
+
+    <button type="button" onclick="openConfirmation()">حفظ التعديلات</button>
+
+
+    <!-- نافذة التأكيد
+<div id="overlay" class="overlay" style="display: none;">
+  <div class="confirmation-box">
+    <p>هل أنت متأكد من تعديل بياناتك؟</p>
+    <div class="buttons">
+      <button type="button" onclick="confirmAction()">نعم</button>
+      <button type="button" onclick="closeConfirmation()">إلغاء</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+    <div class="cd-popup" id="overlay" role="alert">
+      <div class="cd-popup-container">
+        <p>هل أنت متأكد من تعديل بياناتك؟</p>
+        <ul class="cd-buttons">
+          <li><a href="javascript:void(0)" onclick="confirmAction()">نعم</a></li>
+          <li><a href="javascript:void(0)" onclick="closeConfirmation()">إلغاء</a></li>
+        </ul>
+        <!-- FIXED: buttons wrapped inside <li> to match expected structure -->
+
+        <a href="#0" class="cd-popup-close img-replace">Close</a>
+      </div> <!-- cd-popup-container -->
+    </div> <!-- cd-popup -->
+
+  </form>
+
+  <script src="/static/JS/profile_edit.js"></script>
+
+</body>
+
+</html>

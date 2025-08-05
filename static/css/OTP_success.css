@@ -1,0 +1,96 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  animation: slideInRight 1s cubic-bezier(0.4, 1.2, 0.4, 1) 0.1s both;
+}
+
+.right-section {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  font-size: 20px;
+  margin-right: 100px;
+  animation: slideInLeft 1s cubic-bezier(0.4, 1.2, 0.4, 1) 0.3s both;
+}
+
+img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+h1 {
+  color: #007cff;
+}
+
+p {
+  color: #64a5ff;
+}
+
+button {
+  border: 2px solid #007cff;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 15px 0;
+  background: #007cff;
+}
+
+a {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  padding: 15px 40px;
+}
+
+button:hover {
+  background: white;
+  color: #007cff;
+  transition: 0.3s;
+}
+
+button:hover a {
+  color: #007cff;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) scale(0.95);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px) scale(0.95);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

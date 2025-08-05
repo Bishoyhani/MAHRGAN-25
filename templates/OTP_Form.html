@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أدخل كود التحقق</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/OTP_Form.css" />
+</head>
+
+<body>
+  {% if warning_message %}
+  <div id="toast" class="show warning">
+    <div id="img"><svg width="256px" height="256px" viewBox="0 0 14.00 14.00" xmlns="http://www.w3.org/2000/svg"
+        fill="#fffafa" stroke="#fffafa" stroke-width="0.00014">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <g fill-rule="evenodd">
+            <path d="M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7z"></path>
+            <path d="M13 7A6 6 0 1 0 1 7a6 6 0 0 0 12 0z" fill="#ff0000" style="fill: var(--svg-status-bg, #ff0000);">
+            </path>
+            <path
+              d="M7 5.969L5.599 4.568a.29.29 0 0 0-.413.004l-.614.614a.294.294 0 0 0-.004.413L5.968 7l-1.4 1.401a.29.29 0 0 0 .004.413l.614.614c.113.114.3.117.413.004L7 8.032l1.401 1.4a.29.29 0 0 0 .413-.004l.614-.614a.294.294 0 0 0 .004-.413L8.032 7l1.4-1.401a.29.29 0 0 0-.004-.413l-.614-.614a.294.294 0 0 0-.413-.004L7 5.968z">
+            </path>
+          </g>
+        </g>
+      </svg></div>
+    <div id="desc">{{ warning_message }}</div>
+  </div>
+  {% endif %}
+
+
+  <form class="otp-box" method="POST" action="verification" id="otpForm">
+    <input type="hidden" name="latitude" id="lat">
+    <input type="hidden" name="longitude" id="lng">
+    <input type="hidden" name="address" id="address">
+    <input type="hidden" name="governorate" id="gov">
+    <div class="circle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+      </svg>
+    </div>
+
+    <h2>أدخل كود الOTP</h2>
+    <p>تم إرسال كود الOTP إلى: <strong>{{ email }}</strong></p>
+    <div class="otp-inputs">
+      <input type="text" class="otp-input" name="otp1" id="otp1" maxlength="1" required pattern="[0-9]" autocomplete="off" autofocus />
+      <input type="text" class="otp-input" name="otp2" maxlength="1" required pattern="[0-9]" autocomplete="off"/>
+      <input type="text" class="otp-input" name="otp3" maxlength="1" required pattern="[0-9]" autocomplete="off" />
+      <input type="text" class="otp-input" name="otp4" maxlength="1" required pattern="[0-9]" autocomplete="off" />
+      <input type="text" class="otp-input" name="otp5" maxlength="1" required pattern="[0-9]" autocomplete="off" />
+      <input type="text" class="otp-input" name="otp6" maxlength="1" required pattern="[0-9]" autocomplete="off" />
+    </div>
+    <div id="timer">صالح لمدة: <span id="countdown">02:00</span></div>
+    <button type="submit" hidden>تأكيد</button>
+  </form>
+  <script src="/static/JS/OTP_Form.js"></script>
+
+
+
+</body>
+
+</html>

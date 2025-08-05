@@ -1,0 +1,219 @@
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #eef3fa, #ffffff);
+}
+
+.header {
+  background: linear-gradient(to right, #4f8cff, #6ba9ff);
+  color: white;
+  padding: 20px;
+  font-size: 1.7rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.8s ease;
+  height: 70px;
+  align-content: center;
+}
+
+.dashboard {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.kpi-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 32%;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.7s ease;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card i {
+  font-size: 2.2rem;
+  color: #4f8cff;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.charts-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.chart-container {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 48%;
+  max-height: 280px;
+  animation: fadeInUp 0.9s ease;
+  box-sizing: border-box;
+  min-width: 280px;
+  /* أضف هذا السطر */
+}
+
+.chart-container canvas {
+  max-height: 220px;
+  width: 100%;
+}
+
+.table-block {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  margin: 40px 0;
+  animation: fadeInUp 1s ease;
+}
+
+.table-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4f8cff;
+  margin-bottom: 25px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.table-title span {
+  display: inline-block;
+  border-bottom: 3px solid #4f8cff;
+  padding-bottom: 6px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  height: 40px;
+}
+
+th {
+  background-color: #eaf4fe;
+  color: #4f8cff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}
+
+/* DataTables custom search */
+.dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #ccc;
+  padding: 7px 15px;
+  outline: none;
+  width: 200px;
+  font-family: "Cairo", sans-serif;
+  transition: border 0.1s;
+  height: 25px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+  border: 1px solid #4f8cff;
+}
+
+.dataTables_wrapper .dataTables_filter label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .chart-container {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+svg {
+  width: 35px;
+  fill: #4f8cff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    border: 1px solid #0058ff;
+    background: #6fa1ff;
+}
+
+select:focus {
+  border: 1px solid #4f8cff !important;
+  outline: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  border: 1px solid #4f8cff;
+  background: #4f8cff52;
+}

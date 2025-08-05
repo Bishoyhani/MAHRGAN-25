@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>اختر صورتك الرمزية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/avatar.css">
+</head>
+
+<body>
+
+  <h2>اختر صورتك الرمزية أو أضف صورة خاصة بك</h2>
+
+  <form method="POST" action="/save-avatar" enctype="multipart/form-data">
+    <div class="avatar-container">
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/police/male">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/police/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/doctor/female">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/doctor/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/designer/male" >
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/designer/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/chef/male">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/chef/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/farmer/female">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/farmer/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/firefighters/male">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/firefighters/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/teacher/male">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/teacher/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/operator/female">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/operator/female" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/job/astronomer/male">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/job/astronomer/male" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/39">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/39" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/40">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/40" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/82">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/82" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/38" >
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/38" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/43">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/43" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/60">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/60" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/37">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/37" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/64">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/64" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/17">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/17" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/77">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/77" alt="avatar"></div>
+      </label>
+
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="https://avatar.iran.liara.run/public/12">
+        <div class="avatar"><img src="https://avatar.iran.liara.run/public/12" alt="avatar"></div>
+      </label>
+
+
+
+      <!-- Upload Circle with + and image -->
+      <label class="avatar-option">
+        <input type="radio" name="selected_avatar" value="uploaded" id="uploadedRadio">
+        <label for="avatar_file" class="avatar-upload">
+          <span class="plus" id="plus-sign">+</span>
+          <img id="upload-preview" alt="صورة مرفوعة">
+        </label>
+        <input type="file" name="avatar_file" id="avatar_file" accept="image/*" onchange="previewAvatar(event)">
+      </label>
+    </div>
+
+
+
+    <button type="submit">تأكيد الصورة</button>
+  </form>
+
+  <script src="/static/JS/avatar.js"></script>
+
+</body>
+
+</html>

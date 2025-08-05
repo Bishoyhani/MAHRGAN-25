@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رابط غير صالح</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/OTP_expired_failed.css" />
+</head>
+
+<body>
+  <div class="left-section">
+    <img src="/static/images/OTP_expired.jpg">
+  </div>
+  <form class="right-section" action="/resend_new_otp" method="POST">
+    <h1>انتهت صلاحية رمز التحقق</h1>
+    <p>انتهت صلاحية رمز التحقق لمرة واحدة (OTP).<br>يرجى طلب رمز جديد للمتابعة.</p>
+    <button class="btn">طلب رمز جديد</button>
+  </form>
+</body>
+
+</html>

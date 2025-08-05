@@ -1,0 +1,80 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f9f9f9;
+  direction: rtl;
+}
+
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+tr.year-row {
+  background-color: #7494eccb;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+tr.detail-row {
+  background-color: #fff;
+  display: none;
+}
+
+a.back-link {
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #188adb;
+  direction: ltr;
+  text-align: justify;
+  width: fit-content;
+  padding: 10px 50px 10px 30px;
+  transition: all 0.5s ease;
+}
+
+.back-link {
+  border: 2px solid;
+  width: 230px;
+  margin: auto;
+  padding: 10px 15px;
+  text-align: left;
+  position: relative;
+  border-radius: 30px;
+}
+
+.back-link:after {
+  content: "⬅";
+  width: 30px;
+  height: 30px;
+  background: #7494ec;
+  border-radius: 50%;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  top: 6px;
+  transition: all 0.5s ease;
+  color: white;
+  right: 12px;
+}
+
+.back-link:hover {
+  background: #7494ec;
+  color: white;
+  border-color: #7494ec;
+  padding: 10px 30px 10px 50px;
+}
+
+.back-link:hover::after {
+  transform: translateX(-210px);
+  color: #7494ec;
+  background: white;
+}

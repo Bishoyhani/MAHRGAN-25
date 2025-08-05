@@ -1,0 +1,89 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 150px 0;
+  animation: slideInRight 1s cubic-bezier(0.4, 1.2, 0.4, 1) 0.1s both;
+}
+
+.right-section {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  font-size: 20px;
+  margin-right: 100px;
+  animation: slideInLeft 1s cubic-bezier(0.4, 1.2, 0.4, 1) 0.3s both;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  color: #1d0097;
+}
+
+p {
+  color: #6c757d;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 27px;
+  background-color: #240061;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid #240061;
+  font-size: 17px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #4302b3;
+  border-color: #4302b3;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(120px) scale(0.95);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px) scale(0.95);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

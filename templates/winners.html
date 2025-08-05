@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>الفائزون بالجوائز</title>
+  <link rel="stylesheet" href="/static/css/winners.css">
+</head>
+
+<body>
+
+  <h2 style="text-align:center;">قائمة الفائزين حسب السنة</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>السنة</th>
+        <th>الاسم</th>
+        <th>وصف المشروع</th>
+        <th>المركز</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- سنة 2023 -->
+      <tr class="year-row" onclick="toggleDetails('details-2023', this)">
+        <td>2023</td>
+        <td colspan="3" class="toggle-text">اضغط لعرض الفائزين</td>
+      </tr>
+      <tr class="detail-row details-2023">
+        <td></td>
+        <td>بيشوي هاني</td>
+        <td>موقع عشوري لدفع العشور</td>
+        <td>أول</td>
+      </tr>
+      <tr class="detail-row details-2023">
+        <td></td>
+        <td>مارك فايز</td>
+        <td>لعبة تخمين الرقم</td>
+        <td>ثاني</td>
+      </tr>
+      <tr class="detail-row details-2023">
+        <td></td>
+        <td>مينا اسكندر</td>
+        <td>موقع لجمع احتياجات اخوة الرب(احتياجات غير مادية)</td>
+        <td>ثالث</td>
+      </tr>
+
+      <!-- سنة 2024 -->
+      <tr class="year-row" onclick="toggleDetails('details-2024', this)">
+        <td>2024</td>
+        <td colspan="3" class="toggle-text">اضغط لعرض الفائزين</td>
+      </tr>
+      <tr class="detail-row details-2024">
+        <td></td>
+        <td>بيشوي هاني</td>
+        <td>موقع عشوري لدفع العشور</td>
+        <td>أول</td>
+      </tr>
+      <tr class="detail-row details-2024">
+        <td></td>
+        <td>مارك فايز</td>
+        <td>لعبة تخمين الرقم</td>
+        <td>ثاني</td>
+      </tr>
+      <tr class="detail-row details-2024">
+        <td></td>
+        <td>مينا اسكندر</td>
+        <td>موقع لجمع احتياجات اخوة الرب(احتياجات غير مادية)</td>
+        <td>ثالث</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="/" class="back-link">العودة إلى الصفحة الرئيسية</a>
+
+  <script>
+    function toggleDetails(className, headerRow) {
+      const rows = document.querySelectorAll(`.${className}`);
+      const isVisible = rows[0].style.display === 'table-row';
+      const toggleTextCell = headerRow.querySelector('.toggle-text');
+
+      rows.forEach(row => {
+        row.style.display = isVisible ? 'none' : 'table-row';
+      });
+
+      toggleTextCell.textContent = isVisible ? 'اضغط لعرض الفائزين' : 'اضغط لإخفاء الفائزين';
+    }
+  </script>
+
+</body>
+
+</html>
